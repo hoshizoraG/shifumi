@@ -1,0 +1,106 @@
+body {
+    background: linear-gradient(135deg, #232526 0%, #414345 100%);
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    letter-spacing: 0.5px;
+}
+
+h1 {
+    color: #ff9800;
+    margin-top: 40px;
+    font-size: 3.2rem;
+    letter-spacing: 3px;
+    text-shadow: 0 6px 32px #000, 0 2px 0 #fff2;
+    font-family: 'Montserrat', 'Quicksand', Arial, sans-serif;
+    background: linear-gradient(90deg, #ff9800 30%, #ffc107 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+div {
+    margin: 32px 0 0 0;
+}
+
+button {
+    background: linear-gradient(90deg, #ff9800 0%, #ffc107 100%);
+    border: none;
+    border-radius: 40px;
+    color: #232526;
+    font-size: 1.5rem;
+    font-family: 'Quicksand', Arial, sans-serif;
+    font-weight: bold;
+    padding: 20px 48px;
+    margin: 0 18px;
+    cursor: pointer;
+    box-shadow: 0 6px 32px rgba(255,152,0,0.18), 0 2px 8px #0004;
+    transition: 
+        transform 0.12s, 
+        box-shadow 0.22s, 
+        background 0.3s, 
+        color 0.2s;
+    outline: none;
+    border-bottom: 4px solid #ffb300;
+}
+
+button:hover, button:focus {
+    transform: translateY(-6px) scale(1.07) rotate(-2deg);
+    box-shadow: 0 12px 48px #ff980088, 0 4px 16px #0006;
+    background: linear-gradient(90deg, #ffc107 0%, #ff9800 100%);
+    color: #fff;
+    border-bottom: 4px solid #fffde4;
+}
+
+#resultat, #score, #fin {
+    color: #fffde4;
+    font-size: 1.5rem;
+    margin-top: 22px;
+    text-align: center;
+    text-shadow: 0 2px 12px #0008, 0 1px 0 #ff980055;
+    font-family: 'Quicksand', Arial, sans-serif;
+    border-radius: 18px;
+    padding: 12px 24px;
+    background: rgba(255, 152, 0, 0.08);
+    box-shadow: 0 2px 12px #0002;
+    max-width: 90vw;
+}
+
+#fin {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-top: 36px;
+    color: #ff9800;
+    background: rgba(255, 255, 255, 0.08);
+    border: 2px dashed #ff9800;
+    text-shadow: 0 2px 24px #000a, 0 1px 0 #fff2;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2.1rem;
+    }
+    button {
+        font-size: 1.1rem;
+        padding: 12px 18px;
+        margin: 0 6px;
+    }
+    #resultat, #score, #fin {
+        font-size: 1.1rem;
+        padding: 8px 8px;
+    }
+}
+
+button::after {
+    content: " ✧";
+    color: #ffc107;
+    font-size: 1.2rem;
+    display: inline-block;
+    transition: transform 0.2s;
+}
+
+button:hover::after {
+    transform: translateY(-2px);
+}
